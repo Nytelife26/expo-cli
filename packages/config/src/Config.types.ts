@@ -65,7 +65,7 @@ export type PublicExpoConfig = Omit<ExpoConfig, 'hooks' | 'ios' | 'android'> & {
   android?: Omit<ExpoConfig['android'], 'config'>;
 };
 
-export type ExpoAppManifest = ExpoConfig & {
+export type ExpoAppManifest = PublicExpoConfig & {
   sdkVersion: string;
   bundledAssets?: string[];
   isKernel?: boolean;
